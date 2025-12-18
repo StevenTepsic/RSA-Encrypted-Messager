@@ -41,15 +41,15 @@ int main()
 
         switch (selection) {  //paths for user selections
         case 1:
-            cout << "Enter the string you wish to be encrypted" << endl;
+            cout << "Enter the string you wish to be encrypted" << endl;  //encrypts string of characters
             getline(cin, input);
             encryptString(input);
             break;
         case 2:
-            encryptNumbers();
+            encryptNumbers();   //encrypts numbers to numbers *vestigal calculator*
             break;
         case 3:
-            decryptString();
+            decryptString();  //decrypts string of numbers must be seperated by spaces
             break;
         case 4:
             break;

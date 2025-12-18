@@ -15,14 +15,14 @@ int N = p * q;
 int phi = (p - 1) * (q - 1);
 int m;
 
-int power(int& a, int n) {
+int power(int& a, int n) {  //function to get power without using doubles
     int c = a;
     for (size_t i = 0; i < n - 1; i++)
         a *= c;
     return a;
 }
 
-int modPow(int base, int exp, int mod) {
+int modPow(int base, int exp, int mod) {  //long form modulo power for more accuracy
     int result = 1;
     base %= mod;
 
@@ -36,7 +36,7 @@ int modPow(int base, int exp, int mod) {
     return result;
 }
 
-void encryptString(string input) {
+void encryptString(string input) {  //function to take entire string and encrypt into numbers RSA
     int securedChar;
 
     map<char, int> charValues;
@@ -62,7 +62,7 @@ void encryptString(string input) {
 
 }
 
-void decryptString() {
+void decryptString() {  //function to decrypt string of numbers into characters through RSA
     int d;
 
     map<int, char> charValues;
@@ -94,14 +94,14 @@ void decryptString() {
     cout << endl;
 }
 
-void displayMenu() { //so we can display options to user
+void displayMenu() { //so we can display options to user   credit rafoster17
     cout << "Press 1 if you have a string of numbers to be encrypted" << endl;
     cout << "Press 2 if you have individual numbers to be encrypted" << endl;
     cout << "Press 3 to decode a string of numbers seperated by spaces" << endl;
     cout << "Press 4 to exit" << endl;
 }
 
-int getInteger(int lowest, int highest, string prompt)
+int getInteger(int lowest, int highest, string prompt)  //credit rafoster17
 {
     /*
     * This function will get a string input for a number and will call the function isNumber to make sure the user typed in only digits.
@@ -136,7 +136,8 @@ int getInteger(int lowest, int highest, string prompt)
     return number;
 } //getInteger
 
-void encryptNumbers() {
+void encryptNumbers() {  //function to encrypt numbers to numbers from RSA
+                         //mostly vestigal function from when it started as a calculator
     while (true) {
         int securedChar;
         string rsaOut = "";
