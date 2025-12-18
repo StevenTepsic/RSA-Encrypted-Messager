@@ -9,4 +9,4 @@ RSA Encryptor/Decryptor
 
 *Needs cleaned up and comments added
 
-*Credit to rafoster17 for functions like GetInteger
+*Credit to rafoster17 for functions like GetInteger and display menu
