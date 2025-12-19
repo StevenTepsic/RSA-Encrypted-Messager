@@ -14,6 +14,7 @@ int e = 3;
 int N = p * q;
 int phi = (p - 1) * (q - 1);
 int m;
+int d;  //decryptKey
 
 int power(int& a, int n) {  //function to get power without using doubles
     int c = a;
@@ -46,6 +47,24 @@ int calcN() {
     return N;  //calc N 
 }
 
+int modInverse(int e, int phi) {
+    int t = 0, newt = 1;
+    int r = phi, newr = e;
+    while (newr != 0) {
+        int quotient = r / newr;
+        int temp = newt;
+        newt = t - quotient * newt;
+        t = temp;
+
+        temp = newr;
+        newr = r - quotient * newr;
+        r = temp;
+    }
+    if (r > 1) return -1; // no inverse exists
+    if (t < 0) t += phi;
+    return t;
+}
+
 void encryptString(string input) {  //function to take entire string and encrypt into numbers RSA
     int securedChar;
 
@@ -76,7 +95,7 @@ void encryptString(string input) {  //function to take entire string and encrypt
 }
 
 void decryptString() {  //function to decrypt string of numbers into characters through RSA
-    int d;
+    int d = modInverse(e, phi);
 
     calcN();
     calcPhi();
@@ -87,9 +106,7 @@ void decryptString() {  //function to decrypt string of numbers into characters 
     }
     charValues.emplace(32, ' ');
 
-    cout << "Enter decryption key: ";
-    cin >> d;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear newline
+    
 
     cout << "Enter encrypted message:\n";
 

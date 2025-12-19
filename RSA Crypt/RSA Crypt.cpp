@@ -31,7 +31,8 @@ int main()
     cin >> e;
 
     calcN();
-    calcPhi();  //calc N and phi
+    calcPhi(); 
+    d = modInverse(e, phi); //calc N, phi, and d
 
     cout << endl << "Your N value is: " << N << endl;
     cout << "Your phi value is: " << phi << endl;
