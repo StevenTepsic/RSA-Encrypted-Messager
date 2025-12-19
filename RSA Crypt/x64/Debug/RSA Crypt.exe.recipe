@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\steve\Documents\SHNU\CS-210\RSA Crypt\x64\Debug\RSA Crypt.exe</FullPath>
+      <FullPath>C:\Users\steve\source\repos\StevenTepsic\RSA-Encrypted-Messager\x64\Debug\RSA Crypt.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
