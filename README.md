@@ -15,4 +15,4 @@ RSA Encryptor/Decryptor
 
 *encryption is not case sensitive but wull ignore punctuation
 
-*Main files are "RSA header.h" and "RSA Crypt.cpp" both under "RSA Crypt" foler
+*Main files are "RSA header.h" and "RSA Crypt.cpp" both under "RSA Crypt" folder
