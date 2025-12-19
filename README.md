@@ -14,3 +14,5 @@ RSA Encryptor/Decryptor
 *To decrypt use spaces to seperate numbers
 
 *encryption is not case sensitive but wull ignore punctuation
+
+*Main files are "RSA header.h" and "RSA Crypt.cpp" both under "RSA Crypt" foler
