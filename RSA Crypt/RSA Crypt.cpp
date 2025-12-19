@@ -30,8 +30,8 @@ int main()
 
     cin >> e;
 
-    N = p * q;
-    phi = (p - 1) * (q - 1);  //calc N and phi
+    calcN();
+    calcPhi();  //calc N and phi
 
     cout << endl << "Your N value is: " << N << endl;
     cout << "Your phi value is: " << phi << endl;

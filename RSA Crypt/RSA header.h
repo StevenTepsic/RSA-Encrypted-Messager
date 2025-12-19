@@ -36,8 +36,21 @@ int modPow(int base, int exp, int mod) {  //long form modulo power for more accu
     return result;
 }
 
+int calcPhi() {
+    phi = (p - 1) * (q - 1); 
+    return phi;//calc phi
+}
+
+int calcN() {
+    N = p * q;
+    return N;  //calc N 
+}
+
 void encryptString(string input) {  //function to take entire string and encrypt into numbers RSA
     int securedChar;
+
+    calcN();
+    calcPhi();
 
     map<char, int> charValues;
     for (char c = 'A'; c <= 'Z'; ++c) {
@@ -64,6 +77,9 @@ void encryptString(string input) {  //function to take entire string and encrypt
 
 void decryptString() {  //function to decrypt string of numbers into characters through RSA
     int d;
+
+    calcN();
+    calcPhi();
 
     map<int, char> charValues;
     for (char c = 'A'; c <= 'Z'; ++c) {
@@ -146,6 +162,9 @@ void encryptNumbers() {  //function to encrypt numbers to numbers from RSA
         stringstream ss;
         string holder;
         fstream oF;
+
+        calcN();
+        calcPhi();
 
 
         cout << "Enter number to be encoded:";
