@@ -97,7 +97,7 @@ void decryptString() {  //function to decrypt string of numbers into characters 
 }
 
 void displayMenu() { //so we can display options to user   credit rafoster17
-    cout << "Press 1 if you have a string of numbers to be encrypted" << endl;
+    cout << "Press 1 if you have a string of characters to be encrypted" << endl;
     cout << "Press 2 if you have individual numbers to be encrypted" << endl;
     cout << "Press 3 to decode a string of numbers seperated by spaces" << endl;
     cout << "Press 4 to exit" << endl;
