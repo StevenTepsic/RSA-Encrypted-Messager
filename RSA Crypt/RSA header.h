@@ -85,7 +85,7 @@ void encryptString(string input) {  //function to take entire string and encrypt
             continue; //skips unsupported characters
         }
         int m = charValues[ch];
-        securedChar = power(m, e) % N; //encrypt num
+        securedChar = modPow(m, e, N); //encrypt num
 
         cout << setw(2) << setfill('0') << securedChar << ' ';
 
@@ -96,6 +96,7 @@ void encryptString(string input) {  //function to take entire string and encrypt
 
 void decryptString() {  //function to decrypt string of numbers into characters through RSA
     int d = modInverse(e, phi);
+    if (d < 0) d += phi;
 
     calcN();
     calcPhi();
@@ -189,7 +190,7 @@ void encryptNumbers() {  //function to encrypt numbers to numbers from RSA
         cin >> m;   //get preencrypted numbers
 
 
-        securedChar = power(m, e) % N; //encrypt num
+        securedChar = modPow(m, e, N); //encrypt num
 
         cout << endl << "Your encrypted character is: " << securedChar << endl;
 
