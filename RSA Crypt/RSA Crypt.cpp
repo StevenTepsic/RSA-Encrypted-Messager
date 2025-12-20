@@ -36,6 +36,7 @@ int main()
 
     cout << endl << "Your N value is: " << N << endl;
     cout << "Your phi value is: " << phi << endl;
+    cout << "Your d value is: " << d << endl;
 
     do {
         displayMenu();   //displays menu to user
