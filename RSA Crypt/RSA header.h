@@ -77,6 +77,8 @@ void encryptString(string input) {  //function to take entire string and encrypt
     }
     charValues.emplace(' ', 32);
 
+    cout << endl;
+
     for (int i = 0; i < input.size(); i++) {
         char ch = toupper(static_cast<unsigned char>(input[i]));
 
@@ -90,7 +92,7 @@ void encryptString(string input) {  //function to take entire string and encrypt
         cout << setw(2) << setfill('0') << securedChar << ' ';
 
     }
-    cout << endl;
+    cout << endl << endl;
 
 }
 
